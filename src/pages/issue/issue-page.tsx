@@ -7,6 +7,9 @@ import { Balloon, Calendar, GithubLogo } from '@phosphor-icons/react'
 import useIssue from '../../service/useIssue'
 import ButtonsNav from './components/buttons-list'
 import { formatDate } from '../../utils/format-date'
+import ReactMarkdown from 'react-markdown';
+
+
 
 export default function IssuesPage() {
   const params = useParams()
@@ -15,6 +18,7 @@ export default function IssuesPage() {
   if (!responseIssue) {
     return
   }
+
 
   return (
     <div>
@@ -33,7 +37,7 @@ export default function IssuesPage() {
 
       <main>
         <ContainerArticle>
-          <p>{responseIssue.body}</p>
+        <p>{responseIssue.body}</p>
         </ContainerArticle>
       </main>
     </div>

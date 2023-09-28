@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import logo from '../assets/react.svg'
+import effect from '../assets/effect.svg'
 import { RouterPaths } from '../router/router'
 
 export default function HeaderDefault() {
@@ -22,4 +23,7 @@ const Header = styled.header`
   width: 100%;
   background: #04192f;
   padding-top: 46px;
+  background-image: url(${effect});
+  background-repeat: space;
+  background-size: contain;
 `

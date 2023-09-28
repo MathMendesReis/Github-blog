@@ -4,5 +4,6 @@ export const themeDefaulf: DefaultTheme = {
     baseBackground: '#071422',
     baseText: '#AFC2D4',
     baseTitle: '#e7edf4',
+    backgroundSecundary :'#04192f'
   },
 }
