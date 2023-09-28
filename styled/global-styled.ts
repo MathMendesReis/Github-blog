@@ -11,6 +11,5 @@ body{
   color: ${(props) => props.theme.colors.baseText};
   font-weight: 400;
   font-size: 1rem;
-
 }
 `
