@@ -32,16 +32,15 @@ const Markdown = styled(ReactMarkdown)`
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
-  width: 100%; /* Pode ajustar conforme necessário */
+  width: 22rem;
   flex-shrink: 0;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   overflow: hidden;
   -webkit-box-orient: vertical;
   flex: 1;
-  @media (max-width: 844px) {
-    width: 100%;
+  @media (max-width: 367px) {
+    width: 15rem
   }
 `;
 
-// Certifique-se de que você possui a biblioteca ReactMarkdown instalada no seu projeto.
