@@ -4,7 +4,6 @@ import Title from './title'
 import Paragraph from './paragraph'
 import { BaseLink } from '../../../components/base-link'
 import DateCreated from '../../../components/date'
-import Markdown from 'react-markdown'
 
 
 export default function Post({

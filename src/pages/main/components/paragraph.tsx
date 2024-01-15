@@ -1,21 +1,17 @@
-import React from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
 type TheightProps = '7rem' | '3.25rem';
-type TwidthProps = '22rem' | '38.25rem';
 
 export default function Paragraph({
   description,
   heightProps = '7rem',
-  widthProps = '22rem',
 }: {
   description: string;
   heightProps?: TheightProps;
-  widthProps?: TwidthProps;
 }) {
   return (
-    <Container heightProps={heightProps} widthProps={widthProps}>
+    <Container heightProps={heightProps}>
       <Markdown>{description}</Markdown>
     </Container>
   );
@@ -23,12 +19,9 @@ export default function Paragraph({
 
 interface ContainerProps {
   heightProps: TheightProps;
-  widthProps: TwidthProps;
 }
 
 const Container = styled.div<ContainerProps>`
-  /* Estilos gerais do container */
-  width: ${({ widthProps }) => widthProps};
   height: ${({ heightProps }) => heightProps};
 `;
 

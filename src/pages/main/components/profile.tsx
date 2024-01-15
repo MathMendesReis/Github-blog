@@ -26,7 +26,6 @@ export default function Profile() {
         <Paragraph
           description={response?.bio as string}
           heightProps="3.25rem"
-          widthProps="38.25rem;"
         />
         <ContainerInfo>
           <Info
