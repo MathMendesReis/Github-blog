@@ -23,4 +23,7 @@ const ContainerInfo = styled.section`
   justify-content: space-between;
   margin-top: 72px;
   margin-bottom: 12px;
+  @media (max-width: 864px) {
+    width: 100%;
+  }
 `

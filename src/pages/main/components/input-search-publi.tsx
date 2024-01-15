@@ -27,4 +27,8 @@ const InputSearchContent = styled.input`
 
   ::placeholder {
   }
+
+  @media (max-width: 864px) {
+    width: 100%;
+  }
 `

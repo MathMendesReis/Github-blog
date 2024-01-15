@@ -4,6 +4,8 @@ import Title from './title'
 import Paragraph from './paragraph'
 import { BaseLink } from '../../../components/base-link'
 import DateCreated from '../../../components/date'
+import Markdown from 'react-markdown'
+
 
 export default function Post({
   title,
@@ -17,6 +19,7 @@ export default function Post({
   created_at: string
 }) {
   const idToString = number.toString()
+
   return (
     <BaseLink to={`issue/${idToString}`} title="clique para ler mais">
       <CardPost>
@@ -24,7 +27,7 @@ export default function Post({
           <Title text={title} />
           <DateCreated createdAt={created_at} />
         </ContainerParagraphWithDate>
-        <Paragraph description={description} />
+        <Paragraph description={description} heightProps='7rem' />
       </CardPost>
     </BaseLink>
   )
@@ -49,11 +52,15 @@ const CardPost = styled.li`
     transform: scale(1.1);
     transition: all 1s;
   }
+
+  @media (max-width: 422px) {
+    width: 100%;
+  }
 `
 const ContainerParagraphWithDate = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 6px;
-  width: 22rem;
+  width: 100%;
 `

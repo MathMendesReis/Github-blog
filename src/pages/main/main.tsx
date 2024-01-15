@@ -48,4 +48,8 @@ const ContainerListIssues = styled.section`
   gap: 32px;
   flex-wrap: wrap;
   min-height: 50vh;
+  @media (max-width: 872px) {
+    width: 100%;
+    align-items: center;
+  }
 `

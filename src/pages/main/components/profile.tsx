@@ -58,12 +58,19 @@ const ContainerInfo = styled.div`
   display: flex;
   gap: 38px;
   margin-top: 1rem;
+  @media (max-width: 884px) {
+    display: hidden;
+    flex-wrap: wrap;
+  }
 `
 
 const ContainerNameWithLink = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 884px) {
+    width: 100%;
+  }
 `
 const Container = styled.section`
   flex: 1;
@@ -71,6 +78,7 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: space-between;
   gap: 0.5rem;
+  width: 100%;
 `
 const CardProfile = styled(BoxProfilDefault)`
   display: flex;
@@ -78,6 +86,12 @@ const CardProfile = styled(BoxProfilDefault)`
   align-items: center;
   gap: 8px;
   padding: 32px 32px 32px 40px;
+  flex-wrap: wrap;
+  @media (max-width: 884px) {
+    width: 100%;
+    min-height: 500px;
+
+  }
 `
 const TagLink = styled.a`
   color: var(--brand-blue, #3294f8);

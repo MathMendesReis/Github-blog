@@ -7,7 +7,7 @@ import { Balloon, Calendar, GithubLogo } from '@phosphor-icons/react'
 import useIssue from '../../service/useIssue'
 import ButtonsNav from './components/buttons-list'
 import { formatDate } from '../../utils/format-date'
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown'
 
 
 
@@ -37,7 +37,7 @@ export default function IssuesPage() {
 
       <main>
         <ContainerArticle>
-        <p>{responseIssue.body}</p>
+          <Markdown>{responseIssue.body}</Markdown>
         </ContainerArticle>
       </main>
     </div>
@@ -49,12 +49,16 @@ const ContainerInfo = styled(BoxProfilDefault)`
   align-items: flex-start;
   justify-content: space-between;
   padding: 32px;
+  @media (max-width: 873px) {
+    width: 100%;
+  }
 `
 const ContainerInfoWithIcon = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 `
 const ContainerArticle = styled.article`
   display: flex;
@@ -70,6 +74,9 @@ const ContainerArticle = styled.article`
   font-weight: 700;
   line-height: 160%;
   margin: 0 auto;
+  @media (max-width: 864px) {
+    width: 100%;
+  }
   h1 {
     font-size: 32px;
   }
