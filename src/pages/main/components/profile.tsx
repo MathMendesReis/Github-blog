@@ -23,10 +23,12 @@ export default function Profile() {
             <Share size={18} />
           </ContainerLink>
         </ContainerNameWithLink>
-        <Paragraph
+       <DivWithText>
+       <Paragraph
           description={response?.bio as string}
           heightProps="3.25rem"
         />
+       </DivWithText>
         <ContainerInfo>
           <Info
             icon={<GithubLogo size={24} />}
@@ -102,4 +104,10 @@ const TagLink = styled.a`
   font-weight: 700;
   line-height: 160%; /* 19.2px */
   text-transform: uppercase;
+`
+
+const DivWithText = styled.div`
+p{
+  width: 9rem;
+}
 `

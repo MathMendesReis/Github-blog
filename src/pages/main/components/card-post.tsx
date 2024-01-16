@@ -34,7 +34,6 @@ export default function Post({
 
 const CardPost = styled.li`
   width: 26rem;
-  height: 16.25rem;
   flex-shrink: 0;
   border-radius: 10px;
   background: var(--base-post, #112131);
@@ -62,4 +61,5 @@ const ContainerParagraphWithDate = styled.div`
   justify-content: space-between;
   gap: 6px;
   width: 100%;
+  flex-wrap: wrap;
 `
