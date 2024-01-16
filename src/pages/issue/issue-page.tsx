@@ -37,7 +37,7 @@ export default function IssuesPage() {
 
       <main>
         <ContainerArticle>
-          <Markdown>{responseIssue.body}</Markdown>
+          <MarkdowndStyled>{responseIssue.body}</MarkdowndStyled>
         </ContainerArticle>
       </main>
     </div>
@@ -65,7 +65,8 @@ const ContainerArticle = styled.article`
   padding: 40px 32px;
   width: 54rem;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 50px;
   color: var(--base-text, #afc2d4);
   font-family: Nunito;
@@ -80,4 +81,17 @@ const ContainerArticle = styled.article`
   h1 {
     font-size: 32px;
   }
+`
+
+const MarkdowndStyled = styled(Markdown)`
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 15px;
+img{
+  width: 100%;
+}
+h2{
+  color: white;
+}
 `
